@@ -1,0 +1,11 @@
+default: &default
+  adapter: postgresql
+
+
+development:
+  <<: *default
+  database: texter_development
+
+test:
+  <<: *default
+  database: texter_test
