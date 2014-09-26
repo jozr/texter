@@ -16,6 +16,7 @@ gem 'rest-client'
 group :test, :development do
 	gem 'dotenv-rails'
 	gem 'rspec-rails'
+	gem 'pry'
 end
 
 group :test do

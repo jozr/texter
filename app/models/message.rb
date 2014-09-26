@@ -16,7 +16,9 @@ private
                     :To => to }
       ).execute
 
-    rescue
+    rescue RestClient::BadRequest => error
+      message = JSON.parse(error.response)['message']
+      errors.add(:base, message)
       false
     end
 
